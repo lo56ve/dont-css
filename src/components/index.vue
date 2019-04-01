@@ -3,9 +3,9 @@
         <div v-for="(item, index) in componentList"
             :key="index"
             class="component__item"
-            :style="{border: `1px solid ${colorList[index]}`}">
+            :style="{border: '2px solid', borderImage: `${colorList[index]} 10`}">
             <div class="component__item-title"
-                :style="{backgroundColor: colorList[index]}"
+                :style="{background: colorList[index]}"
                 v-html="componentNameList.get(item)">
             </div>
             <components :is="item"></components>
@@ -18,11 +18,15 @@
     import { colorList, componentNameList } from './const.js';
     import TextBlink from './text_blink';
     import Zebra from './zebra';
+    import BreakRow from './break_row';
+    import BoxShadow from './box_shadow';
 
     export default {
         components: {
             TextBlink,
-            Zebra
+            Zebra,
+            BreakRow,
+            BoxShadow
         },
 
         data () {
