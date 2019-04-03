@@ -20,13 +20,17 @@
     import Zebra from './zebra';
     import BreakRow from './break_row';
     import BoxShadow from './box_shadow';
+    import TabPage from './tab_page';
+    import PolygonShape from './polygon_shape';
 
     export default {
         components: {
             TextBlink,
             Zebra,
             BreakRow,
-            BoxShadow
+            BoxShadow,
+            TabPage,
+            PolygonShape
         },
 
         data () {
@@ -56,7 +60,7 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: minmax(100px, auto);
-        grid-gap: 20px;
+        grid-gap: 5px;
     }
 
     .component__item-title {
